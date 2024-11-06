@@ -1,0 +1,27 @@
+{
+  "name": "json-schema-coverage",
+  "version": "0.0.0",
+  "description": "Measure coverage of a JSON Schema",
+  "type": "module",
+  "scripts": {
+    "test": "node lib/schema-test-coverage.mjs ./schema.yaml ./instances"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralfhandl/json-schema-coverage.git"
+  },
+  "keywords": [
+    "JSON",
+    "Schema"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralfhandl/json-schema-coverage/issues"
+  },
+  "homepage": "https://github.com/ralfhandl/json-schema-coverage#readme",
+  "dependencies": {
+    "@hyperjump/json-schema": "^1.9.8",
+    "yaml": "^2.6.0"
+  }
+}

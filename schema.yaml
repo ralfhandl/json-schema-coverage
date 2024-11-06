@@ -1,0 +1,27 @@
+$id: https://foo.org/bar
+$schema: https://json-schema.org/draft/2020-12/schema
+description: schema for testing schema coverage
+type: object
+$comment: root object
+properties:
+  foo:
+    description: Root property foo
+    type: string
+  bar:
+    $ref: "#/$defs/bar-object"
+required:
+  - foo
+$defs:
+  bar-object:
+    $comment: child object
+    description: child object
+    type: object
+    properties:
+      baz:
+        description: child property baz
+        type: string
+      opt:
+        description: optional property
+        type: string
+    required:
+      - baz
