@@ -1,4 +1,7 @@
-foo: yeah
-bar:
-  baz: nope
+primitive: yeah
+structured-nested:
+  req: sure
+  opt: nope
+structured-ref:
+  req: nope
   opt: sure

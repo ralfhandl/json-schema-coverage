@@ -1,27 +1,40 @@
-$id: https://foo.org/bar
+$id: https://foo.org/schema
 $schema: https://json-schema.org/draft/2020-12/schema
 description: schema for testing schema coverage
 type: object
 $comment: root object
 properties:
-  foo:
+  primitive:
     description: Root property foo
     type: string
-  bar:
-    $ref: "#/$defs/bar-object"
-required:
-  - foo
-$defs:
-  bar-object:
-    $comment: child object
-    description: child object
+  structured-nested:
+    $comment: nested object
+    description: nested object
     type: object
     properties:
-      baz:
-        description: child property baz
+      req:
+        description: required property
         type: string
       opt:
         description: optional property
         type: string
     required:
-      - baz
+      - req
+  structured-ref:
+    $ref: "#/$defs/sub-object"
+required:
+  - primitive
+$defs:
+  sub-object:
+    $comment: reusable object
+    description: reusable object
+    type: object
+    properties:
+      req:
+        description: required property
+        type: string
+      opt:
+        description: optional property
+        type: string
+    required:
+      - req
