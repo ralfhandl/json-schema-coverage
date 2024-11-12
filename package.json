@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ralfhandl/json-schema-coverage#readme",
   "dependencies": {
-    "@hyperjump/json-schema": "^1.9.8",
+    "@hyperjump/json-schema": "^1.9.9",
     "yaml": "^2.6.0"
   }
 }
